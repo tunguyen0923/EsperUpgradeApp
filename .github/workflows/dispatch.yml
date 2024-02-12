@@ -1,0 +1,15 @@
+name: Dispatch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+    tags-ignore: # ignore running when a tag is created
+      - "**"
+      
+jobs:
+  Dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ya 
+        run: echo "${{ github.event_name }}"
